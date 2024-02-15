@@ -1,0 +1,35 @@
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 136-261-827
+INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 19:24:41] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 19:24:41] "GET /static/images/pexels-aleksandar-pasaric-3423860.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 19:24:45] "GET /edit/3 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 19:24:45] "[36mGET /static/images/pexels-aleksandar-pasaric-3423860.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 19:24:49] "GET /add HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 19:24:49] "[36mGET /static/images/pexels-aleksandar-pasaric-3423860.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 778-978-381
+INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 19:31:47] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 19:31:47] "[36mGET /static/images/pexels-aleksandar-pasaric-3423860.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 19:31:47] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 19:31:54] "GET /edit/3 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 19:31:54] "[36mGET /static/images/pexels-aleksandar-pasaric-3423860.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 19:31:57] "GET /add HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 19:31:57] "[36mGET /static/images/pexels-aleksandar-pasaric-3423860.jpg HTTP/1.1[0m" 304 -
+INFO:root:Product deleted with ID: 4
+INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 19:32:11] "POST /delete/4 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 19:32:11] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 19:32:11] "[36mGET /static/images/pexels-aleksandar-pasaric-3423860.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 19:32:17] "GET /add HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 19:32:17] "[36mGET /static/images/pexels-aleksandar-pasaric-3423860.jpg HTTP/1.1[0m" 304 -
+INFO:root:Product added: sameep
+INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 19:32:25] "POST /add HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 19:32:25] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Feb/2024 19:32:25] "[36mGET /static/images/pexels-aleksandar-pasaric-3423860.jpg HTTP/1.1[0m" 304 -
