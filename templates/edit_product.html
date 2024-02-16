@@ -1,0 +1,82 @@
+<!-- edit_product.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Product</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url('/static/images/pexels-aleksandar-pasaric-3423860.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .edit_title{
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .edit_form {
+            width: 400px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow : 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+    
+        /* Optional: Add some spacing between form elements */
+        .edit_form label,
+        .edit_form input {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class ='edit_title'>Edit Product</h1>
+        <div class="edit_form">
+            <form id="edit-product-form" method="post">
+                {{ form.csrf_token }}
+                <div class="mb-3">
+                    <label for="name" class="form-label"><b>Name:</b></label>
+                    {{ form.name(class="form-control") }}
+                </div>
+                <div class="mb-3">
+                    <label for="description" class="form-label"><b>Description:</b></label>
+                    {{ form.description(class="form-control") }}
+                </div>
+                <div class="mb-3">
+                    <label for="price" class="form-label"><b>Price:</b></label>
+                    {{ form.price(class="form-control") }}
+                </div>
+                <input type="submit" value="Submit" class="btn btn-success">
+            </form>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('#edit-product-form').submit(function(event) {
+                event.preventDefault();
+                var id = '{{ product.id }}';  // Corrected line
+                $.ajax({
+                    url: '/edit/' + id,
+                    type: 'POST',
+                    data: $(this).serialize(),
+                    success: function(response) {
+                        if (response.success) {
+                            window.location.href = '/';
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
