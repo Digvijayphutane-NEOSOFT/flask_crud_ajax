@@ -8,14 +8,14 @@ WORKDIR /app
 ADD . /app
 
 # Install any needed packages specified in requirements.txt
-RUN pip install --upgrade pip && \
-    pip install -r requirements.txt
+RUN pip install -r requirements.txt
+    
 
 # Make port 5000 available to the world outside this container
 EXPOSE 5000
 
 # Define environment variable
-ENV NAME World
+ENV NAME venv
 
 # Run app.py when the container launches
 CMD ["python", "app.py"]
