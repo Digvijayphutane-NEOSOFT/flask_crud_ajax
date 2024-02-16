@@ -1,0 +1,24 @@
+version: "3.8"  # Adjust version as needed
+
+services:
+  app:
+    build: .  # Build the image from the current directory's Dockerfile
+    ports:
+      - "5000:5000"  # Map container port 5000 to host port 5000
+    volumes:
+      - .:/app  # Mount the project directory as a volume for development (optional)
+    depends_on:
+      - db
+
+  db:
+    image: mysql:8.0  # Use an official MySQL image or a suitable alternative
+    ports:
+      - "3306:3306"  # Map container port 3306 to host port 3306
+    environment:
+      MYSQL_ROOT_PASSWORD: password  # Set a strong password
+      MYSQL_DATABASE: prod_ajax  # Set your database name
+    volumes:
+      - mysql_data:/var/lib/mysql  # Mount a volume to persist database data (optional)
+
+volumes:
+  mysql_data:  # Create a named volume for database persistence (optional)
